@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+jarvis.log
+jarvis_memory.json
+jarvis_reminders.json
