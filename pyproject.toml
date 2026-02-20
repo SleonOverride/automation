@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-assistant"
+version = "0.1.0"
+description = "A feature-rich Python Jarvis-inspired assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "requests>=2.31.0",
+]
+
+[project.optional-dependencies]
+voice = [
+  "SpeechRecognition>=3.10.0",
+  "pyttsx3>=2.90",
+  "pyaudio>=0.2.14",
+]
+
+[project.scripts]
+jarvis = "jarvis.main:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+addopts = "-q"
